@@ -1,0 +1,14 @@
+  {
+    "data":
+    [
+      {
+        "state": "processing",
+        "errorCode": null
+      },
+      {
+        "state": "error",
+        "errorCode": null
+      }
+    ]
+  
+  }
