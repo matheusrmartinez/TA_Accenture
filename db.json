@@ -6,9 +6,8 @@
         "errorCode": null
       },
       {
-        "state": "error",
-        "errorCode": null
+        "state": "success",
+        "errorCode": ""
       }
     ]
-  
   }

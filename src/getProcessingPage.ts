@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 export const NO_STOCK = "NO_STOCK";
 export const INCORRECT_DETAILS = "INCORRECT_DETAILS";
 export const PROCESSING = "processing";
@@ -20,7 +18,7 @@ export default async function getProcessingPage(
   processingPagesData: ProcessingPageProps[]
 ) {
 
-  if (!processingPagesData) return;
+  if (!processingPagesData || processingPagesData.length === 0) return;
 
   let processingResults: ProcessingResult = {} as ProcessingResult;
 
@@ -43,10 +41,10 @@ export default async function getProcessingPage(
       processingResults.message = "null"
     }
 
-    return processingResults
   };
+  return processingResults
 }
-const timer = (ms = 20000) => new Promise(resolve => setTimeout(resolve, ms));
+const timer = (ms = 2000) => new Promise(resolve => setTimeout(resolve, ms));
 
 function handleErrorMessage(errorCode: string | null | undefined) {
   switch (errorCode) {
